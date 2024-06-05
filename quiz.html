@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Quiz for developers">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="quiz.css">
+    <script defer src="quiz.js"></script>
+    <title>Quiz App</title>
+</head>
+<body>
+    <section id="Content">
+        <div id="ContentWrapper">
+            <div class="quiz-container">
+                <div class="question-section">
+                    <h2 id="questionText"></h2>
+                    <ul>
+                        <li>
+                            <input type="radio" name="option" id="answer1" class="answer">
+                            <label id="option1" for="answer1"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="option" id="answer2" class="answer">
+                            <label id="option2" for="answer2"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="option" id="answer3" class="answer">
+                            <label id="option3" for="answer3"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="option" id="answer4" class="answer">
+                            <label id="option4" for="answer4"></label>
+                        </li>
+                    </ul>
+                    <div id="SubmitButton">
+                        <button class="btn" type="submit">Save & Next</button>
+                        <button class="btn" type="button" onclick="markForReview()">Mark for Review & Next</button>
+                        <button class="btn" type="button" onclick="clearResponse()">Clear Response</button>
+                    </div>
+                    <div id="ShowScore" class="ScoreArea"></div>
+                </div>
+                <div class="palette-section">
+                    <div class="question-palette">
+                        <!-- Question buttons will be inserted here dynamically -->
+                    </div>
+                    <div class="legend">
+                        <p><span class="answered"></span> Answered</p>
+                        <p><span class="not-answered"></span> Not Answered</p>
+                        <p><span class="marked"></span> Marked</p>
+                        <p><span class="not-visited"></span> Not Visited</p>
+                    </div>
+                    <div class="additional-options">
+                        <button class="btn" type="button" onclick="submitQuiz()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
