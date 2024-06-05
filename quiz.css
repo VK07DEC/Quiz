@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#Content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(36, 44, 46, 0.726), rgba(35, 9, 182, 0.836));
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#Content #ContentWrapper {
+  width: 900px;
+  background: azure;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 20px white;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-container {
+  display: flex;
+}
+
+.question-section {
+  flex: 2;
+}
+
+.palette-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#questionText {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding: 10px 20px;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+#SubmitButton {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+#SubmitButton button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: rgb(12, 132, 189);
+  color: white;
+  transition: 0.3s;
+}
+
+#SubmitButton button:hover {
+  background: rgb(7, 68, 97);
+}
+
+#ShowScore {
+  padding: 20px;
+  text-align: center;
+}
+
+.question-palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.question-palette button {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.question-palette button:hover {
+  background-color: #d0d0d0;
+}
+
+button.not-visited {
+  background-color: #e0e0e0;
+}
+
+button.answered {
+  background-color: #4CAF50;
+}
+
+button.marked {
+  background-color: #ffeb3b;
+}
+
+button.not-answered {
+  background-color: #f44336;
+}
+
+.ScoreArea {
+  display: none;
+}
+
+.legend {
+  text-align: center;
+}
+
+.legend p {
+  margin: 5px 0;
+}
+
+.legend span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.answered {
+  background-color: #4CAF50;
+}
+
+.not-answered {
+  background-color: #f44336;
+}
+
+.marked {
+  background-color: #ffeb3b;
+}
+
+.not-visited {
+  background-color: #e0e0e0;
+}
+
+.additional-options {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.additional-options .btn {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(12, 132, 189);
+  color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.additional-options .btn:hover {
+  background: rgb(7, 68, 97);
+}
+
+@media screen and (max-width: 768px) {
+  .quiz-container {
+    flex-direction: column;
+  }
+
+  .palette-section {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
